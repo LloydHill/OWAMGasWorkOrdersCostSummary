@@ -255,7 +255,7 @@ ORDER BY 1</CommandText>
             </Paragraphs>
             <Left>0.14583in</Left>
             <Height>0.54167in</Height>
-            <Width>24.42674in</Width>
+            <Width>45.79132in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -5863,7 +5863,7 @@ FormatDateTime(Lookup(ReportItems!AssetId.Value,Fields!ASSET_ID.Value,Fields!Cre
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>= CDEC(FormatNumber(( ( ReportItems!TraceWire.value + ReportItems!CSTraceWire.value )  /ReportItems!ServiceLength.Value )  - 1,2))</Value>
+                                  <Value>= CDEC(FormatNumber(( ( ReportItems!TraceWire.value + ReportItems!CSTraceWire.value )  /ReportItems!ServiceLength.Value )  - 1,2))/100</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -6176,7 +6176,7 @@ FormatDateTime(Lookup(ReportItems!AssetId.Value,Fields!ASSET_ID.Value,Fields!Cre
 + ReportItems!PE58PIPE_QUANTITY.Value 
 + ReportItems!P34PIPE_QUANTITY.Value 
 + ReportItems!Pe114pipe_QUANTITY.Value
-)/ReportItems!ServiceLength.value ) -1,2))</Value>
+)/ReportItems!ServiceLength.value ) -1,2))/100</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -6293,7 +6293,7 @@ FormatDateTime(Lookup(ReportItems!AssetId.Value,Fields!ASSET_ID.Value,Fields!Cre
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIf(Globals!RenderFormat.Name="EXCELOPENXML", ReportItems!OtLabor.Value * 0.0145/100, ReportItems!OtLabor.Value * 0.0145)</Value>
+                                  <Value>= cdec(ReportItems!OtLabor.Value * 0.0145)</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -6409,7 +6409,7 @@ FormatDateTime(Lookup(ReportItems!AssetId.Value,Fields!ASSET_ID.Value,Fields!Cre
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=CDEC(IIf(Globals!RenderFormat.Name="EXCELOPENXML", Formatnumber((ReportItems!RegLabor.value *  0.3179)/100,4), Formatnumber((ReportItems!RegLabor.value *  0.3179)/100,4)))</Value>
+                                  <Value>=CDEC( Formatnumber((ReportItems!RegLabor.value *  0.3179),4))</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Color>DarkBlue</Color>
