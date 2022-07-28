@@ -5863,7 +5863,7 @@ FormatDateTime(Lookup(ReportItems!AssetId.Value,Fields!ASSET_ID.Value,Fields!Cre
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>= CDEC(FormatNumber(( ( ReportItems!TraceWire.value + ReportItems!CSTraceWire.value )  /ReportItems!ServiceLength.Value )  - 1,2))/100</Value>
+                                  <Value>= CDEC(FormatNumber((ReportItems!TraceWire.value + ReportItems!CSTraceWire.value )  /(ReportItems!ServiceLength.Value )  - 1,2))</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -6169,14 +6169,14 @@ FormatDateTime(Lookup(ReportItems!AssetId.Value,Fields!ASSET_ID.Value,Fields!Cre
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=CDec(formatNumber(((ReportItems!PE1PIPE_QUANTITY.Value 
+                                  <Value>=CDec(formatNumber((ReportItems!PE1PIPE_QUANTITY.Value 
 + ReportItems!PE2PIPE_QUANTITY.Value 
 + ReportItems!PE4PIPE_QUANTITY.Value 
 + ReportItems!PE6PIPE_QUANTITY.Value 
 + ReportItems!PE58PIPE_QUANTITY.Value 
 + ReportItems!P34PIPE_QUANTITY.Value 
 + ReportItems!Pe114pipe_QUANTITY.Value
-)/ReportItems!ServiceLength.value ) -1,2))/100</Value>
+)/(ReportItems!ServiceLength.value)  -1,2))</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
